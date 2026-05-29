@@ -12,6 +12,10 @@ It's been known that #[many chrome extensions are malicious](https://socket.dev/
 - [rust](https://www.rust-lang.org/)
 - [wasm](https://developer.mozilla.org/en-US/docs/WebAssembly)
 
+# UI/UX Design
+
+The UI/UX design for this project is specified in [`voltagent/DESIGN.md`](voltagent/DESIGN.md). It documents a Voltagent-inspired design language — a dark, near-black canvas with a single electric-green accent — covering the full token set (colors, typography, spacing, radii) and the component primitives (nav, buttons, hairline-bordered cards, code mockups, hero/content bands, footer) used to render the extension scoring surface.
+
 # Threat Modeling
 
 - [Supply chain attacks](https://socket.dev/blog/108-chrome-ext-linked-to-data-exfil-session-theft-shared-c2) have been known and become a real problem for Chrome extensions. Google account identity is a common target. Once a malicious extension is installed, the attacker can obtain temporary session tokens and read/write data from the user's account. Beyond that, Telegram/Youtube/Tiktok etc. session tokens are also targets for data exfiltration.
