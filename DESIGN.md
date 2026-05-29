@@ -49,8 +49,8 @@ The code is organized into a related group of rust modules:
 ### Trust Boundary
 
 - Data is fetched from the Chrome Web Store URL
-- LLM invocation is implemented using a vanilla opencode server
-- Policy evaluation is implemented using a vanilla opencode server
+- LLM invocation is implemented by calling a vanilla opencode server over localhost (`permgrade-llm`)
+- Policy evaluation is a deterministic Rust crate (`permgrade-policy`) — in-process, consulting no LLM and making no network calls, which is what makes the Tier-1 short-circuit verifiable and auditable
 - Completely run from localhost. No data is exfiltrated to the outside world
 - The decision chain by the deterministic policy layer and the LLM-evaluated signals is logged by hashing the inputs and appending to an audit log which also lives on the localhost
 
